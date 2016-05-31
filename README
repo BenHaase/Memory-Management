@@ -1,0 +1,24 @@
+Ben Haase
+Assignment 6
+
+To run:
+	type "make"
+	type "./oss"
+
+To cleanup:
+	type "make clean"
+
+Statistics about execution are stored in a file called "osstest", and also printed to the screen.
+The program uses the LRU page replacement algorithm to create space in physical memory so it 
+may continue filling requests.
+Each time a process is spawed the clock is progressed random # 1-500ms, this occurs if there
+are less than 12 processes in the system and may never be exceeded.
+Child processes may terminate after 1000+-100 requests have been made.  A non-page fault request
+progresses the clock by 10ns and a page faulting request must wait 15ms to be filled.
+Throughput is the number of process that ran to completion.
+Turn around time is calculated by (time process terminated - time process entered the system)
+Wait time is how long a process spent waiting for requests.
+Utilization is the amount of time oss progressed the clock / the total time.
+Process requests were not printed as it would make the file huge and unable to read.
+The memory map for oss is printed every 20 logical seconds for this same reason.
+Process's indicate their termination in the log file as well as the memory access time they experienced.
