@@ -1,2 +1,2 @@
-# Virtual-Memory-Simulation
-Virtual Memory Simulation 
+# Memory-Management
+Memory management simulation using LRU page replacement algorithm
